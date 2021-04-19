@@ -1,0 +1,151 @@
+@import '~@/assets/stylus/variables'
+
+.table
+  &__row
+    width 100%
+    display flex
+    align-items center
+    justify-content space-between
+    min-height 44px
+    padding 22px 10px 26px
+    box-sizing border-box
+    border-bottom 2px solid #DDDCE3
+    transition background .2s
+
+    &:hover
+      background #EDFEFA
+
+  &__col
+    width 100%
+    flex-grow 1
+
+  &__col-2,
+  &__col-3,
+  &__col-4,
+  &__col-5,
+  &__col-6,
+  &__col-7
+    text-align right
+
+  &__col-1
+    flex 222px 0 0
+
+  &__col-2
+    flex 82px 0 0
+
+  &__col-3
+    flex 178px 0 0
+
+  &__col-4
+    flex 100px 0 0
+
+  &__col-5
+    flex 90px 0 0
+
+  &__col-6
+    flex 130px 0 0
+
+.table-head
+  .table__row
+    padding 10px 0 28px
+
+    &:hover
+      background none
+
+  &__txt
+    font-size 14px
+    font-weight 550
+
+    &--large
+      font-size 16px
+      font-weight 600
+
+.sort
+  display flex
+  align-items baseline
+  cursor pointer
+  transition .2s
+
+  .icon
+    width 11px
+    height 8px
+    margin 0 0 0 6px
+    transition .1s
+
+    path
+      transition .2s
+
+  &:hover
+    color lighten(dark, 40%)
+
+    .icon
+      path
+        fill lighten(dark, 40%)
+        stroke lighten(dark, 40%)
+
+.sort.active
+  color: main
+
+  .icon
+    transform rotate(180deg)
+
+    path
+      fill main
+      stroke main
+
+.table-user
+  display flex
+  align-items center
+
+  &__ava-cont
+    width 68px
+    height 68px
+    display flex
+    flex 68px 0 0
+    margin 0 10px 0 0
+    color dark
+    text-decoration none
+    border-radius 100%
+    overflow hidden
+
+  &__ava
+    width 100%
+    height 100%
+    object-fit cover
+
+  &__profile
+    display inline-block
+    margin 0 0 6px
+    color dark
+    font-size 15px
+    font-weight 600
+    text-decoration none
+
+  &__txt
+    display block
+    color #7E829B
+    font-size 12px
+
+
+@media (max-width 590px)
+  .table
+    &__row
+      padding 12px 0
+      flex-direction column
+
+    &__col
+      margin 10px 0
+      flex 100% 0 0
+
+    &__col-2,
+    &__col-3,
+    &__col-4,
+    &__col-5,
+    &__col-6,
+    &__col-7
+      flex 100% 0 0
+      text-align center
+
+  .sort.active
+    .icon
+      transform unset
