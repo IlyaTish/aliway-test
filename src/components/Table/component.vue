@@ -50,8 +50,8 @@
 
 <script lang='ts'>
 import { Component, Vue } from 'vue-property-decorator'
-import FieldService from '@/data/FieldService'
 
+import FieldService from '@/data/FieldService'
 import CarpetIcon from './icons/carpet.svg'
 
 
